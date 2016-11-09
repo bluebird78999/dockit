@@ -3,6 +3,7 @@ node_js: stable
 
 # S: Build Lifecycle
 install:
+  - cd ./mark
   - npm install
 
 
@@ -10,7 +11,7 @@ install:
  # - npm install -g gulp
 
 script:
-  - node ./mark/index.js
+  - node index.js
   
   
 after_script:
