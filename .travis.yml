@@ -11,3 +11,20 @@ install:
 
 script:
   - node ./mark/index.js
+  
+  
+after_script:
+  - git config user.name "vczero"
+  - git config user.email "wlhmyit@126.com"
+  - git add .
+  - git commit -m "Update docs"
+  - git push --force --quiet "https://${gh-pages}@${GH_REF}" master:master
+# E: Build LifeCycle
+
+branches:
+  only:
+    - gh-pages
+env:
+ global:
+   - GH_REF: https://github.com/vczero/dockit.git 
+  
