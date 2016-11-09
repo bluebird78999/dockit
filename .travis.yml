@@ -1,9 +1,13 @@
 language: node_js
-node_js:
-  - "6"
-before_script:
+node_js: stable
+
+# S: Build Lifecycle
+install:
   - npm install
 
-scripts: {
-    "test": "node ./mark/index.j"
-}
+
+#before_script:
+ # - npm install -g gulp
+
+script:
+  - node ./mark/index.js
